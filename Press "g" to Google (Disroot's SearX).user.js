@@ -16,7 +16,7 @@
         }
         if ('d' == event.key) {
             var q = document.getElementById('q');
-            var url = 'https://www.duckduckgo.com/search?q=' + encodeURIComponent(q.value);
+            var url = 'https://duckduckgo.com/?q=' + encodeURIComponent(q.value);
             // console.log(url);
             document.location = url;
         }
