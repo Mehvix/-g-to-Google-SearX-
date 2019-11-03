@@ -1,10 +1,9 @@
 // ==UserScript==
-// @name         Press "g" to Google and "d" to DDG (Disroot's SearX)
+// @name         DuckDuckGo redirect
 // @version      0.1
-// @description  Press "g" to Google and "d" to DDG for Disroot's SearX
+// @description  https://github.com/Mehvix/Search-Engine-Redirect
 // @author       Mehvix
-// @match        https://search.disroot.org/*
-// @grant        none
+// @match        https://duckduckgo.com/*
 // @license      GNU General Public License v3
 // ==/UserScript==
 
@@ -14,15 +13,15 @@
         if ('input' === document.activeElement.tagName.toLowerCase()) {
             return;
         }
-        if ('d' == event.key) {
-            var q = document.getElementById('q');
-            var url = 'https://duckduckgo.com/?q=' + encodeURIComponent(q.value);
-            // console.log(url);
-            document.location = url;
-        }
+//        //TODO I think you have to post searx
+//        if ('s' == event.key) {
+//            var q = document.getElementById('search_form_input');
+//            var url = 'https://search.disroot.com/?q=' + encodeURIComponent(q.value);
+//            // console.log(url);
+//            document.location = url;
+//        }
         if ('g' == event.key) {
-
-            var q = document.getElementById('q');
+            var q = document.getElementById('search_form_input');
             var url = 'https://www.google.com/search?q=' + encodeURIComponent(q.value);
             // console.log(url);
             document.location = url;
