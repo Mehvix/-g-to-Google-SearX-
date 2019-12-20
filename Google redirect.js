@@ -3,7 +3,7 @@
 // @version      0.1
 // @description  https://github.com/Mehvix/Search-Engine-Redirect
 // @author       Mehvix
-// @include     /^https?://[a-z]+\.google(\.com?)?\.[a-z]{2,3}/.*$/
+// @include     /^https?://(www.)?google(\.com?)?\.[a-z]{2,3}/.*$/
 // @license      GNU General Public License v3
 // ==/UserScript==
 
@@ -22,7 +22,7 @@
 //        //TODO I think you have to post searx
 //        if ('s' == event.key) {
 //            var q = window.document.location.search;
-//            var url = 'https://duckduckgo.com/' + q;
+//            var url = '' + encodeURIComponent(q.value);
 //            // console.log(url);
 //            document.location = url;
 //        }
