@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         DuckDuckGo redirect
-// @version      0.1
+// @version      0.2
 // @description  https://github.com/Mehvix/Search-Engine-Redirect
 // @author       Mehvix
-// @match        https://duckduckgo.com/*
+// @match        https://*duckduckgo.com/?q=*
 // @license      GNU General Public License v3
 // ==/UserScript==
 

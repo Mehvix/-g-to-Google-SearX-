@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Disroot's SearX redirect
-// @version      0.3
+// @version      0.4
 // @description  https://github.com/Mehvix/Search-Engine-Redirect
 // @author       Mehvix
-// @match        https://search.disroot.org/
+// @match        https://search.disroot.org/*
+// @grant        none
 // @license      GNU General Public License v3
 // ==/UserScript==
 
@@ -20,6 +21,7 @@
             document.location = url;
         }
         if ('g' == event.key) {
+
             var q = document.getElementById('q');
             var url = 'https://www.google.com/search?q=' + encodeURIComponent(q.value);
             // console.log(url);

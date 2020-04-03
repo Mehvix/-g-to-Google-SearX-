@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Google redirect
-// @version      0.1
+// @version      0.2
 // @description  https://github.com/Mehvix/Search-Engine-Redirect
 // @author       Mehvix
-// @include     /^https?://(www.)?google(\.com?)?\.[a-z]{2,3}/.*$/
+// @include      https://*google.com/search?*
 // @license      GNU General Public License v3
 // ==/UserScript==
 
