@@ -5,7 +5,7 @@ Easily swap between search engines with the press of a button while maintaining 
 ### Installation:
 
 1. Install a userscript extension, such as [Violentmonkey](https://violentmonkey.github.io/).
-2. Install the script [here](https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/master.user.js).
+2. Install the script [here](https://github.com/Mehvix/search-engine-redirect/raw/master/SearchEngineRedirect.user.js).
 
 ### Usage:
 
