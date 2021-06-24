@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name            Master redirect
-// @version         2021-06-24
-// @description     https://github.com/Mehvix/search-engine-redirect
+// @version         2021-06-24-3
+// @description     Easily swap between search engines with the press of a button while maintaining your current query.
 // @author          Mehvix
 // @include         https://search.disroot.org/search?q=*
 // @include         https://search.brave.com/search?q=*
 // @include         https://duckduckgo.com/?q=*
 // @include         https://www.google.com/search?*
-// @downloadURL     https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/master.user.js
-// @updateURL       https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/master.user.js
+// @downloadURL     https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/SearchEngineRedirect.user.js
+// @updateURL       https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/SearchEngineRedirect.user.js
 // @supportURL      https://github.com/Mehvix/search-engine-redirect/issues
 // @license         GNU General Public License v3
 // ==/UserScript==
