@@ -1,16 +1,19 @@
-#### What:
-A series of scripts that give you the ability to redirect yourself to a range of search engines while maintaining your current query.
+### What:
 
+Easily swap between search engines with the press of a button while maintaining your current query. Similar to [DuckDuckGo bangs](https://duckduckgo.com/bang) except with a keypress.
 
+### Installation:
 
-#### Installation:
-Add these to a script extension, such as [Tapermonkey](https://www.tampermonkey.net), and you're set.
+1. Install a userscript extension, such as [Violentmonkey](https://violentmonkey.github.io/).
+2. Install the script [here](https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/master.user.js).
 
+### Usage:
 
-#### Support:
+Press a search engine's respective key to change to that engine. For example, if you are on DuckDuckGo and wanted to change to Brave, you would hit `b`. If you were on Brave and wanted to go to Google, you would hit `g`.
 
-| Engine | Redir. from? | Redir. to? | Redir. to Key |
-| ------ | :-------: | :-------: | :---: |
-| Google | <ul><li>[x] </li> | <ul><li>[x] </li> | `g` | 
-| SearX | <ul><li>[X] </li> | <ul><li>[ ] </li> | N/A | 
-| DuckDuckGo | <ul><li>[x] </li> | <ul><li>[x] </li> | `d` | 
+|   Engine   | Key |
+| :--------: | :-: |
+|   Google   | `g` |
+|   SearX    | `s` |
+| DuckDuckGo | `d` |
+|   Brave    | `b` |

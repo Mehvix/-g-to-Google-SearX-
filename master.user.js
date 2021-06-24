@@ -7,6 +7,9 @@
 // @include         https://search.brave.com/search?q=*
 // @include         https://duckduckgo.com/?q=*
 // @include         https://www.google.com/search?*
+// @downloadURL     https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/master.user.js
+// @updateURL       https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/master.user.js
+// @supportURL      https://github.com/Mehvix/search-engine-redirect/issues
 // @license         GNU General Public License v3
 // ==/UserScript==
 
