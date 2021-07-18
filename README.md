@@ -14,6 +14,7 @@ Press a search engine's respective key to change to that engine. For example, if
 |   Engine   | Key |
 | :--------: | :-: |
 |   Google   | `g` |
-|   SearX    | `s` |
+|   SearX    | `x` |
+| Startpage  | `s` |
 | DuckDuckGo | `d` |
 |   Brave    | `b` |
