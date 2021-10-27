@@ -4,7 +4,7 @@
 // @description     Easily swap between search engines with the press of a button while maintaining your current query.
 // @author          Mehvix
 // @include         https://search.disroot.org/search?q=*
-// @include         https://search.brave.com/search?q=*
+// @include         https://search.brave.com/*?q=*
 // @include         https://duckduckgo.com/?q=*
 // @include         https://www.google.com/search?*
 // @include         https://www.startpage.com/*search*
@@ -57,28 +57,22 @@
             let url = "";
             switch (event.key.toLowerCase()) {
                 case "g":
-                    url =
-                        h != URL_GOOG && h != URL_GOOG_E
-                            ? `https://${URL_GOOG_E}/search?q=`
-                            : "";
+                    url = h != URL_GOOG ? `${URL_GOOG_E}/search?q=` : "";
                     break;
                 case "d":
-                    url = h != URL_DDG ? `https://${URL_DDG}/?q=` : "";
+                    url = h != URL_DDG ? `${URL_DDG}/?q=` : "";
                     break;
                 case "b":
-                    url =
-                        h != URL_BRAVE ? `https://${URL_BRAVE}/search?q=` : "";
+                    url = h != URL_BRAVE ? `${URL_BRAVE}/search?q=` : "";
                     break;
                 case "s":
-                    url =
-                        h != URL_START ? `https://${URL_START}/search?q=` : "";
+                    url = h != URL_START ? `${URL_START}/sp/search?query=` : "";
                     break;
                 case "x":
-                    url =
-                        h != URL_SEARX ? `https://${URL_SEARX}/search?q=` : "";
+                    url = h != URL_SEARX ? `${URL_SEARX}/search?q=` : "";
                     break;
             }
-            if (url && q) document.location = url + q;
+            if (url && q) document.location = "https://" + url + q;
         }
     });
 })();
