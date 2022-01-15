@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name            Master redirect
-// @version         2021-06-24-3
+// @version         2022-01-15-0
 // @description     Easily swap between search engines with the press of a button while maintaining your current query.
 // @author          Mehvix
-// @include         https://search.disroot.org/search?q=*
-// @include         https://search.brave.com/*?q=*
 // @include         https://duckduckgo.com/?q=*
 // @include         https://www.google.com/search?*
+// @include         https://search.brave.com/*?q=*
 // @include         https://www.startpage.com/*search*
+// @include         https://search.disroot.org/search?q=*
+// @include         https://yandex.com/search/?text=*
 // @downloadURL     https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/SearchEngineRedirect.user.js
 // @updateURL       https://raw.githubusercontent.com/Mehvix/search-engine-redirect/master/SearchEngineRedirect.user.js
 // @supportURL      https://github.com/Mehvix/search-engine-redirect/issues
@@ -23,11 +24,13 @@
     const URL_BRAVE = "search.brave.com";
     const URL_START = "www.startpage.com";
     const URL_SEARX = "search.disroot.org";
+    const URL_YANDX = "yandex.com";
 
     document.addEventListener("keyup", function (event) {
         if ("input" === document.activeElement.tagName.toLowerCase()) {
             return;
         } else {
+            console.log("EEEE");
             let h = location.host;
             let q = "";
 
@@ -52,6 +55,13 @@
                 case URL_SEARX:
                     q = encodeURIComponent(document.getElementById("q").value);
                     break;
+
+                case URL_YANDX:
+                    // NOTE: This is unreachable code since you can never leave yandex because you cannot ever unselect the search input box
+                    q = encodeURIComponent(
+                        document.getElementsByName("text")[0].value
+                    );
+                    break;
             }
 
             let url = "";
@@ -70,6 +80,9 @@
                     break;
                 case "x":
                     url = h != URL_SEARX ? `${URL_SEARX}/search?q=` : "";
+                    break;
+                case "y":
+                    url = h != URL_YANDX ? `${URL_YANDX}/search/?text=` : "";
                     break;
             }
             if (url && q) document.location = "https://" + url + q;
