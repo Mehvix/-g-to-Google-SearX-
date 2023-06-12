@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Master redirect
-// @version         2022-01-15-0
+// @version         2023-06-12-0
 // @description     Easily swap between search engines with the press of a button while maintaining your current query.
 // @author          Mehvix
 // @include         https://duckduckgo.com/?q=*
@@ -27,10 +27,10 @@
     const URL_YANDX = "yandex.com";
 
     document.addEventListener("keyup", function (event) {
-        if ("input" === document.activeElement.tagName.toLowerCase()) {
+        let activeElt = document.activeElement.tagName.toLowerCase();
+        if ("input" === activeElt || "textarea" === activeElt) {
             return;
         } else {
-            console.log("EEEE");
             let h = location.host;
             let q = "";
 
@@ -45,9 +45,7 @@
                     q = window.location.search.substring(3);
                     break;
                 case URL_BRAVE:
-                    q = encodeURIComponent(
-                        document.getElementById("searchbox").value
-                    );
+                    q = encodeURIComponent(document.getElementById("searchbox").value);
                     break;
                 case URL_START:
                     q = encodeURIComponent(document.getElementById("q").value);
@@ -55,12 +53,9 @@
                 case URL_SEARX:
                     q = encodeURIComponent(document.getElementById("q").value);
                     break;
-
                 case URL_YANDX:
                     // NOTE: This is unreachable code since you can never leave yandex because you cannot ever unselect the search input box
-                    q = encodeURIComponent(
-                        document.getElementsByName("text")[0].value
-                    );
+                    q = encodeURIComponent(document.getElementsByName("text")[0].value);
                     break;
             }
 
